@@ -1,0 +1,297 @@
+@url-body_bg:                url(img/bg.jpg);
+
+@font-size_body:             11pt;
+
+@color-cv_header_bg:         rgb(232, 232, 234);
+@color-cv_header_border:     darken(@color-cv_header_bg, 10%);
+@color-cv_header_text:       #686360;
+
+@color-cv_body_bg:           lighten(#020203, 6%);
+@color-cv_body_border:       lighten(@color-cv_body_bg, 10%);
+@color-cv_body_text:         #C9C2BC;
+@color-cv_body_h:            white;
+@border-style_cv:            1px solid;
+@border-style_experience:    1px solid;
+@min-width-cv:               800px;
+@max-width-cv:               1000px;
+
+@width-cv_left:              60%;
+@width-cv_right:             40%;
+
+@url-transition:             url(img/transition.png);
+
+@url-pencil:                 url(img/pencil.png);
+
+@padding-left_text:          35pt;
+
+@link-color:                 #166CA1;
+@link-color-hover:           lighten(#166CA1, 10%);
+
+body {
+    background-image: @url-body_bg;
+    font-family: sans-serif;
+    font-size: @font-size_body;
+    line-height: 2;
+}
+
+p {
+    display: block;
+    padding-bottom: 6pt;
+    line-height: 1.5;
+}
+
+.p {
+    line-height: 1.5;
+}
+
+i {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 30pt;
+    color: black;
+}
+
+a,
+a:visited,
+a:active {
+    color: @link-color;
+    text-decoration: none;
+    border-bottom: 1px @link-color dashed;
+        
+    &:hover {
+        color: @link-color-hover;
+        text-decoration: none;
+        border-bottom: 1px @link-color-hover dashed;
+    }
+ }
+
+/*Строка без отступов*/
+.row {
+    float: left;
+    width: 100%;
+}
+
+/*Добавляет отступы для строк*/
+.row_margin {
+    margin: 0 @padding-left_text;
+    margin-top: @padding-left_text;
+}
+
+/*Левая колонка готовая к заполнению*/
+.left {
+    float: left;
+    width: @width-cv_left;
+}
+
+/*Правая колонка без отступов*/
+.right {
+    float: left;
+    width: @width-cv_right;
+}
+
+/*Добавляет отступы для правой колонки*/
+.right_margin {
+    margin-left: @padding-left_text;
+}
+
+/*Добавляет нижний отступ для последней строки*/
+.footer_row {
+    padding-bottom: @padding-left_text;
+}
+
+/*Примесь для стандартного выравнивания текста*/
+.text_align {
+    text-align: left;
+    vertical-align: top;
+}
+
+/*Контейнер для резюме и карандаша*/
+.container {
+    position: relative;
+    padding: 0 80px;
+    min-width: @min-width-cv + 80;
+    max-width: @max-width-cv + 80;
+    margin: 0 auto;
+}
+
+/*Общий контейнер для тела и шапки резюме*/
+.cv_container {
+    position: relative;
+    float: left;
+    background-color: @color-cv_header_bg;
+    width: 100%;
+    margin: 5% auto;
+    box-shadow: -20px 70px 50px rgba(0,0,0,0.3), 30px -20px 40px rgba(245,245,245,0.8);
+}
+
+.cv_header {
+    border: @border-style_cv @color-cv_header_border;
+    border-bottom: none;
+    color: @color-cv_header_text;
+
+    .key {
+        float: left;
+        font-weight: 600;
+        width: 20%;
+    }
+
+    .value {
+        float: left;
+        font-style: italic;
+        width: 80%;
+    }
+}
+
+.cv_body {
+    background-color: @color-cv_body_bg;
+    border: @border-style_cv @color-cv_body_border;
+    border-top: none;
+    border-bottom: none;
+    color: @color-cv_body_text;
+
+    h3 {
+        font-size: 18pt;
+        color: @color-cv_body_h;
+        line-height: 1;
+        padding-bottom: 24pt;
+        padding-top: 18pt;
+    }
+
+    h4 {
+        font-size: 14pt;
+        font-style: italic;
+        color: @color-cv_body_h;
+    }
+
+    h5 {
+        margin-top: 8pt;
+        color: darken(@color-cv_body_h, 20%);
+        font-style: italic;
+    }
+
+    ul li {
+        margin-bottom: 14pt;
+    }
+
+    .experience {
+        line-height: 1.5;
+    }
+
+    .lang_name {
+        color: @color-cv_body_h;
+    }
+
+    .indicator {
+        height: 4px;
+        width: 100%;
+        background-color: #686360;
+        display: inline-block;
+
+        .positive {
+            height: inherit;
+            width: inherit;
+            background-color: @color-cv_body_h;
+        }
+
+        .prc00 {width: 0%;}
+        .prc05 {width: 5%;}
+        .prc10 {width: 10%;}
+        .prc15 {width: 15%;}
+        .prc20 {width: 20%;}
+        .prc25 {width: 25%;}
+        .prc30 {width: 30%;}
+        .prc35 {width: 35%;}
+        .prc40 {width: 40%;}
+        .prc45 {width: 45%;}
+        .prc50 {width: 50%;}
+        .prc55 {width: 55%;}
+        .prc60 {width: 60%;}
+        .prc65 {width: 65%;}
+        .prc70 {width: 70%;}
+        .prc75 {width: 75%;}
+        .prc80 {width: 80%;}
+        .prc85 {width: 85%;}
+        .prc90 {width: 90%;}
+        .prc95 {width: 95%;}
+        .prc100 {width: 100%;}
+    }
+}
+
+/*Переход от шапки резюме на тело*/
+.transition {
+    background: @url-transition 100% 100% no-repeat;
+    height: 20px;
+    width: 100%;
+    border-left: @border-style_cv @color-cv_header_border;
+    border-right: @border-style_cv @color-cv_body_border;
+}
+
+.pencil {
+    position: absolute;
+    top: 0px;
+    margin: 50% 0;
+    right: 4px;
+    background-image: @url-pencil;
+    width: 32px;
+    height: 606px;
+}
+
+/*Классы для создания списка с временной линией*/
+.edu {
+    float: left;
+    width: 100%;
+
+    .duration {
+        float: inherit;
+        width: 90px;
+        height: 100%;
+        line-height: 1.5;
+    }
+
+    .body {
+        margin-left: -90px;
+        padding-left: 180px;
+        background: url(img/time-point-middle.png) 180px 0 no-repeat;
+        padding-bottom: 20pt;
+        line-height: 1.5;
+
+        .text {
+            padding-left: 36px;
+
+            .name {
+                line-height: 1.5;
+            }
+
+            .position {
+                font-weight: 600;
+                color:@color-cv_body_h;
+                line-height: 2;
+            }
+
+            .desc {
+                font-style: italic;
+                font-size: @font-size_body - 2;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .top {
+        background-image: url(img/time-point-top.png);
+    }
+
+    .last {
+        padding-bottom: 0;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    padding-top: 6pt;
+    display: block;
+}
