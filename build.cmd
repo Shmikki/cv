@@ -1,1 +1,1 @@
-lessc --clean-css index.less > index.css 2> error.log
+lessc --clean-css css/index.less > css/index.css 2> error.log
